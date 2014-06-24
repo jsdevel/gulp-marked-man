@@ -1,0 +1,39 @@
+{
+  "name": "gulp-marked-man",
+  "main": "lib/gulp-marked-man.js",
+  "version": "0.0.0",
+  "description": "A gulp plugin that converts markdown files to man pages.",
+  "author": "Joseph Spencer",
+  "scripts": {
+    "pretest": "jshint index.js && jshint --config ./test/.jshintrc test",
+    "test": "istanbul cover _mocha && cat ./coverage/lcov.info | coveralls -v && rm -rf coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsdevel/gulp-marked-man.git"
+  },
+  "keywords": [],
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsdevel/gulp-marked-man/issues"
+  },
+  "devDependencies": {
+    "coveralls": "~2.10.0",
+    "should": "~4.0.4",
+    "mocha": "~1.20.1",
+    "jshint": "~2.3.0",
+    "istanbul": "~0.2.11",
+    "event-stream": "~3.1.5",
+    "gulp": "~3.8.1",
+    "gulp-util": "*",
+    "through2": "*"
+  },
+  "peerDependencies": {
+    "gulp-util": "*",
+    "through2": "*"
+  },
+  "dependencies": {
+    "marked-man": "~0.1.3"
+  }
+}
