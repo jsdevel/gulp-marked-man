@@ -47,5 +47,5 @@ THE SOFTWARE.
 [travis-url]: https://travis-ci.org/jsdevel/gulp-marked-man
 [travis-image]: http://img.shields.io/travis/jsdevel/gulp-marked-man.svg
 
-[coveralls-url]: https://coveralls.io/r/jsdevel/node-gulp-marked-man
-[coveralls-image]: http://img.shields.io/coveralls/jsdevel/node-gulp-marked-man/master.svg
+[coveralls-url]: https://coveralls.io/r/jsdevel/gulp-marked-man
+[coveralls-image]: http://img.shields.io/coveralls/jsdevel/gulp-marked-man/master.svg
