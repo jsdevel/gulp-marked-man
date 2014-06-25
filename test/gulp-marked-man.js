@@ -20,7 +20,7 @@ describe('gulp-marked-man', function(done){
 
   it('should allow the extension to be preserved', function(){
     gulp.src('./test/fixtures/simple.1.md')
-    .pipe(markedMan({preserveExtension: true}))
+    .pipe(markedMan({preserveExtensions: true}))
     .pipe(gulp.dest('./dist/'))
     .pipe(es.wait(function(){
       fs.existsSync('./dist/simple.1.md').should.be.true;

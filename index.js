@@ -20,7 +20,7 @@ module.exports = function(options){
       }));
     }
 
-    if(!options.preserveExtension){
+    if(!options.preserveExtensions){
       file.path = gutil.replaceExtension(file.path, '');
     }
 

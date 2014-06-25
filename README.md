@@ -11,7 +11,7 @@ By default `gulp-marked-man` will remove the file extension of the input files. 
 allows your syntax highlighting for `.md` files and facilitates sectioned manfiles
 I.E. `mydoc.1 mydoc.5`.
 
-You can override this by passing in `{preserveExtension: true}`.
+You can override this by passing in `{preserveExtensions: true}`.
 
 ```javascript
 var rename = require('gulp-rename');
@@ -29,7 +29,7 @@ var rename = require('gulp-rename');
 var markedMan = require('gulp-marked-man');
 
 gulp.src('./test/fixtures/simple.1.md')
-  .pipe(markedMan({preserveExtension: true}))
+  .pipe(markedMan({preserveExtensions: true}))
   .pipe(gulp.dest('./dist/'));
   // -> ./dist/simple.1.md
 ```
