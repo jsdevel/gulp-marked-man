@@ -3,9 +3,13 @@
 
 ## Usage
 
-Options are passed through to `marked-man`.
+You can configure the way `marked-man` parses your input files by providing an
+options object.
 
-### Without options (extension removed)
+`gulp-marked-man` looks for the following options:
+* `preserveExtensions` if given extensions are not removed from markdown files.
+
+### Input File Extensions
 
 By default `gulp-marked-man` will remove the file extension of the input files.  This
 allows your syntax highlighting for `.md` files and facilitates sectioned manfiles
@@ -13,6 +17,7 @@ I.E. `mydoc.1 mydoc.5`.
 
 You can override this by passing in `{preserveExtensions: true}`.
 
+Extensions removed:
 ```javascript
 var rename = require('gulp-rename');
 var markedMan = require('gulp-marked-man');
@@ -23,7 +28,7 @@ gulp.src('./test/fixtures/simple.1.md')
   // -> ./dist/simple.1
 ```
 
-### With options (extension preserved)
+Extensions preserved:
 ```javascript
 var rename = require('gulp-rename');
 var markedMan = require('gulp-marked-man');
