@@ -1,7 +1,7 @@
 {
   "name": "gulp-marked-man",
   "main": "lib/gulp-marked-man.js",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A gulp plugin that converts markdown files to man pages.",
   "author": "Joseph Spencer",
   "scripts": {
