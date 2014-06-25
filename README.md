@@ -1,19 +1,40 @@
 # gulp-marked-man [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url]
 > A gulp plugin that converts markdown files to man pages.
 
-## Example
+## Usage
+
+Options are passed through to `marked-man`.
+
+### Without options (extension removed)
+
+By default `gulp-marked-man` will remove the file extension of the input files.  This
+allows your syntax highlighting for `.md` files and facilitates sectioned manfiles
+I.E. `mydoc.1 mydoc.5`.
+
+You can override this by passing in `{preserveExtension: true}`.
 
 ```javascript
 var rename = require('gulp-rename');
 var markedMan = require('gulp-marked-man');
 
-gulp.src('./test/fixtures/simple.md')
+gulp.src('./test/fixtures/simple.1.md')
   .pipe(markedMan())
-  .pipe(rename(function(path){
-    path.extname = '.1';
-  })
   .pipe(gulp.dest('./dist/'));
+  // -> ./dist/simple.1
 ```
+
+### With options (extension preserved)
+```javascript
+var rename = require('gulp-rename');
+var markedMan = require('gulp-marked-man');
+
+gulp.src('./test/fixtures/simple.1.md')
+  .pipe(markedMan({preserveExtension: true}))
+  .pipe(gulp.dest('./dist/'));
+  // -> ./dist/simple.1.md
+```
+
+
 
 ##LICENSE
 ``````
